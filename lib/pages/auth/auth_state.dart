@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 
-class AuthState extends Equatable{
+class AuthState extends Equatable {
   bool isAuthenticated;
 
   AuthState({required this.isAuthenticated});
@@ -25,11 +25,9 @@ class AuthState extends Equatable{
     };
   }
 
-  factory AuthState.fromMap(Map<String, dynamic> map) {
-    if (map == null) return null;
-
+  factory AuthState.fromMap(Map<String, dynamic>? map) {
     return AuthState(
-      isAuthenticated: map['isAuthenticated'] as bool,
+      isAuthenticated: map == null ? false : map['isAuthenticated'] as bool,
     );
   }
 

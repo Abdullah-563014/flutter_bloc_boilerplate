@@ -3,6 +3,7 @@ import 'package:age_calculator/pages/auth/auth_cubit.dart';
 import 'package:age_calculator/pages/auth/forgot_password_page.dart';
 import 'package:age_calculator/pages/auth/login_page.dart';
 import 'package:age_calculator/pages/auth/registration_page.dart';
+import 'package:age_calculator/routes/app_blocs.dart';
 import 'package:age_calculator/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,12 +24,11 @@ class AppPages {
     return [
       PageEntity(
         path: AppRoutes.login,
-        page: LoginPage(),
-        bloc: BlocProvider(create: (_) => AuthCubit())
+        page: const LoginPage(),
+        bloc: AppBlocs.authBloc
       ),
     ];
   }
-
 
   static List<dynamic> Blocer(BuildContext buildContext) {
     List<dynamic> blocerList = <dynamic>[];
@@ -38,7 +38,6 @@ class AppPages {
 
     return blocerList;
   }
-
 
   static MaterialPageRoute GenerateRouteSettings(RouteSettings settings) {
     if (settings.name != null) {

@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class AppBlocs {
 
 
-  static AuthCubit auth_bloc = AuthCubit();
+  static BlocProvider<AuthCubit> authBloc = BlocProvider(create: (_) => AuthCubit());
 
 
 }
