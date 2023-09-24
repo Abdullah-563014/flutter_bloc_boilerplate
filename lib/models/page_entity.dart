@@ -7,12 +7,12 @@ class PageEntity<T> {
 
   String path;
   Widget page;
-  dynamic bloc;
+  List<dynamic> blocs;
 
 
 
   PageEntity({
-    required this.path, required this.page, required this.bloc
+    required this.path, required this.page, required this.blocs
   });
 
 
