@@ -64,17 +64,18 @@ class AppPages {
     return blocsList;
   }
 
-  static MaterialPageRoute generateRouteSettings(RouteSettings settings) {
+  static MaterialPageRoute? generateRouteSettings(RouteSettings settings) {
     if (settings.name != null) {
       var result = getRoutesList().where((element) => element.path == settings.name);
       if (result.isNotEmpty) {
         return MaterialPageRoute<void>(builder: (_) => result.first.page, settings: settings);
       }
 
-      return MaterialPageRoute<void>(builder: (_) => const MainPage(), settings: settings);
+      // return MaterialPageRoute<void>(builder: (_) => const MainPage(), settings: settings);
+      return null;
     }
 
-    return MaterialPageRoute<void>(builder: (_) => const MainPage(), settings: settings);
+    return null;
   }
 
 }
