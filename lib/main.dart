@@ -45,7 +45,12 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
+            brightness: Brightness.light
           ),
+          darkTheme: ThemeData(
+              brightness: Brightness.dark
+          ),
+          themeMode: ThemeMode.light,
           initialRoute: AppRoutes.login,
           navigatorObservers: [AppPages.routeObserver],
           onGenerateRoute: AppPages.generateRouteSettings,

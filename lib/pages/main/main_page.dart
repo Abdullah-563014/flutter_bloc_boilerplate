@@ -8,8 +8,14 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("This is main page"),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text("Home Page"),
+      ),
+      body: Center(
+        child: Text("This is main page"),
+      ),
     );
   }
 }

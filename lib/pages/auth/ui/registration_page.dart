@@ -8,8 +8,14 @@ class RegistrationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("This is registration page"),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text("Registration Page"),
+      ),
+      body: Center(
+        child: Text("This is registration page"),
+      ),
     );
   }
 }
